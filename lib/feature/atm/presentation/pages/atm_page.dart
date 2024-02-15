@@ -10,6 +10,7 @@ class AtmPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Orientation orientation = MediaQuery.of(context).orientation;
     return Scaffold(
       appBar: AppBar(
         title: SvgPicture.asset('assets/images/atm_logo.svg', width: 69),
@@ -45,13 +46,15 @@ class AtmPage extends StatelessWidget {
           },
           listener: (BuildContext context, AtmState state) {
             if (state is AtmSuccessState || state is AtmErrorState) {
-              final scrollTarget = resultAreaKey.currentContext;
-              if (scrollTarget != null) {
-                Scrollable.ensureVisible(
-                  scrollTarget,
-                  duration: const Duration(milliseconds: 500),
-                  curve: Curves.ease,
-                );
+              if (orientation == Orientation.landscape) {
+                final scrollTarget = resultAreaKey.currentContext;
+                if (scrollTarget != null) {
+                  Scrollable.ensureVisible(
+                    scrollTarget,
+                    duration: const Duration(milliseconds: 500),
+                    curve: Curves.ease,
+                  );
+                }
               }
             }
           },

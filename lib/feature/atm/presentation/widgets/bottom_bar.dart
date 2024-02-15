@@ -6,16 +6,15 @@ class BottomBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return OrientationBuilder(builder: (context, orientation) {
-      return Card(
-          margin: EdgeInsets.zero,
-          child: Padding(
-            padding: const EdgeInsets.only(top: 15),
-            child: Wave(
-              waveType: WaveType.bottom,
-              waveHeight: orientation == Orientation.portrait ? 105 : 15,
-            ),
-          ));
-    });
+    final Orientation orientation = MediaQuery.of(context).orientation;
+    return Card(
+        margin: EdgeInsets.zero,
+        child: Padding(
+          padding: const EdgeInsets.only(top: 15),
+          child: Wave(
+            waveType: WaveType.bottom,
+            waveHeight: orientation == Orientation.portrait ? 105 : 15,
+          ),
+        ));
   }
 }
