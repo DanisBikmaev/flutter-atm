@@ -1,16 +1,17 @@
-# atm
+# Flutter ATM
 
-A new Flutter project.
+Flutter ATM project.
 
-## Getting Started
+## Preview
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+| IOS portrait | Android portrait |
+|----|----|
+| ![IOS portrait](./readme_gifs/ios_portrait.gif) | ![Android portrait](./readme_gifs/android_portrait.gif) |
+
+**IOS landscape**
+![Alt Text](./readme_gifs/ios_landscape.gif)
+**Android landscape**
+![Alt Text](./readme_gifs/android_landscape.gif)
